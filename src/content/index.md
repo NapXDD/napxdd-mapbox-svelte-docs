@@ -1,89 +1,94 @@
 ---
 title: Get Started
-description: Learn how to set up and start using our modern documentation template built with Svelte 5, MDSvex, and Tailwind CSS.
+description: Documentation to install mapbox-svelte
 ---
 
-# Getting Started
-
-Create beautiful, modern documentation for your project in minutes with our Svelte-powered documentation template.
+<div style="padding: 1em; border-left: 4px solid #007acc; margin-bottom: 1.5em; font-weight: bold;">
+🚀 Before we begin: This project will always be open source. Feel free to fork it and modify it to your heart's content!
+</div>
 
 ## Prerequisites
 
 Before you begin, ensure you have:
-- Node.js 18+ installed
-- Git installed
-- A GitHub account
-- Basic familiarity with Markdown
+
+- Mapbox
+- Basic familiarity with Mapbox
+
+> **Note:** If you don't have Mapbox yet, you need to create a Mapbox account and obtain an access token. Follow the official Mapbox installation guide here: [Mapbox Installation](https://docs.mapbox.com/mapbox-gl-js/guides/install/)
 
 ## Quick Start
 
-1. Go to [GitHub](https://github.com/code-gio/svelte-docs-starter)  click the green **"Use this template"** button at the top of this page
-2. Select **"Create a new repository"**
-3. Name your repository and choose its visibility
-4. Click **"Create repository from template"**
-5. Clone your new repository:
-   ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
-   ```
-6. Install dependencies:
-   ```bash
-   cd your-repo-name
-   npm install
-   ```
-7. Start the development server:
-   ```bash
-   npm run dev
-   ```
+Install the required packages using npm:
 
-Your documentation site is now running at `http://localhost:5173`!
-
-## Core Features
-
-Our template combines powerful tools to create an exceptional documentation experience:
-
-- **Component Library**: Built on shadcn/ui for beautiful, accessible components
-- **Type Safety**: Full TypeScript support for reliable development
-- **Modern Stack**: Powered by Svelte 5, MDSvex, and TailwindCSS
-- **Customizable**: Easy theming and layout modifications
-
-## Adding Content
-
-### Creating Pages
-
-1. Add new `.md` files in the `src/docs` directory
-2. Include frontmatter at the top of your markdown files:
-   ```markdown
-   ---
-   title: Your Page Title
-   description: A brief description of the page
-   ---
-   ```
-3. Write your content using Markdown and MDSvex features
-
-### Using Components
-
-Import and use Svelte components directly in your markdown:
-
-```markdown
-<script>
-  import { Alert } from '$lib/components/ui/alert';
-</script>
-
-# My Page
-
-<Alert>
-  This is a custom component in markdown!
-</Alert>
+```bash
+npm install @napxdd/mapbox-svelte
 ```
 
-## Next Steps
+## Add mapbox key to your env file
 
-- Browse the [Examples](/docs/examples) to see what you can build
-- Learn about customization in our [Customization Guide](/docs/customize)
-- Check out our [Component Styling](/docs/styling/theme)
+Add the following line to your `.env` file, replacing `your_key` with your actual Mapbox access token:
 
-## Need Help?
+```bash
+PUBLIC_MAPBOX_KEY=your_key
+```
 
-- Browse our [documentation](/docs)
-- Report issues on [GitHub](https://github.com/code-gio/svelte-docs-starter/issues)
-- Check out the [examples](/docs/examples) for inspiration
+## Add Mapbox container
+
+Add the Mapbox container to initialize the map.
+
+```svelte
+<script>
+	import * as MapBox from '@napxdd/mapbox-svelte';
+
+	let mapComponent: mapboxgl.Map;
+</script>
+
+<div class="map-container">
+	<Mapbox.Container bind:this={mapComponent}></Mapbox.Container>
+</div>
+
+<style>
+	.map-container {
+		width: 100%;
+		height: 100vh;
+	}
+</style>
+```
+
+So when you create a `Mapbox.Container`, it simply initializes Mapbox for you like this:
+
+```svelte
+	map = new mapboxgl.Map({
+		container: mapContainer,
+		center: [longitude, latitude],
+		zoom: zoom,
+	});
+```
+
+Note that we have a bound variable named `mapComponent`. The purpose of this variable is to get a reference to the map instance created in `Mapbox.Container`, so you can freely use it for more customized Mapbox functionality as desired.
+
+```svelte
+<script>
+	import * as MapBox from '@napxdd/mapbox-svelte';
+
+	let mapComponent: Mapbox.Container;
+
+	$effect(() => {
+		const map = mapComponent.getMap();
+		console.log(map);
+	});
+</script>
+
+<div class="map-container">
+	<Mapbox.Container bind:this={mapComponent}></Mapbox.Container>
+</div>
+
+<style>
+	.map-container {
+		width: 100%;
+		height: 100vh;
+	}
+</style>
+```
+
+For more information about available features, visit the Features section.
