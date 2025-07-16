@@ -4,7 +4,7 @@ description: Documentation to install mapbox-svelte
 ---
 
 <div style="padding: 1em; border-left: 4px solid #007acc; margin-bottom: 1.5em; font-weight: bold;">
-🚀 Before we begin: This project will always be open source. Feel free to fork it and modify it to your heart's content!
+🚀 Before we begin: This project will always be open source. Feel free to fork and modify it to your heart's content!
 </div>
 
 ## Prerequisites

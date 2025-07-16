@@ -50,7 +50,7 @@
 				<div class="block sm:hidden">
 					<MobileTableOfContents />
 				</div>
-				<PromoCard />
+				<!-- <PromoCard /> -->
 			</div>
 		</div>
 	</div>
