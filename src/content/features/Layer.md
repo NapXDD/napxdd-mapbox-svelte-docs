@@ -7,7 +7,7 @@ Learn more about [Layer](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/
 
 This Layer component adds a visual layer to your Mapbox map, such as circles, lines, fills, or symbols.
 
-## Add Mapbox container
+## Add Mapbox layer
 
 ```svelte
 <script>
