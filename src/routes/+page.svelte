@@ -7,5 +7,5 @@
 
 <Nav />
 <Hero />
-<Features />
+<!-- <Features /> -->
 <Footer />

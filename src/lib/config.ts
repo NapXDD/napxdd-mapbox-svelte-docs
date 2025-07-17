@@ -5,15 +5,14 @@ import type { Feature, PromoConfig, SiteConfig } from './types/config';
 
 export const siteConfig: SiteConfig = {
 	version: '0.0.1',
-	title: 'Documentation',
-	description:
-		'Comprehensive documentation for your project. Built with Svelte 5, MDSvex, Tailwind CSS, and shadcn/ui components.',
-	github: 'https://github.com/code-gio/svelte-firekit-docs',
+	title: '@napxdd/Mapbox-svelte',
+	description: 'The map component build on Mapbox',
+	github: 'https://github.com/NapXDD/mapbox-svelte',
 	npm: '',
 
 	quickLinks: [
 		{ title: 'Customize', href: '/docs/customize' },
-		{ title: 'Examples', href: '/docs/examples' }
+		{ title: 'Component', href: '/docs/component' }
 	],
 	logo: '/logo.svg',
 	logoDark: '/logo-white.svg',

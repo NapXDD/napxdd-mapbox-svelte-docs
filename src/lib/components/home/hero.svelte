@@ -28,7 +28,7 @@
 <div class="relative overflow-hidden">
 	<div class="relative mx-auto max-w-[85rem] px-4 pb-10 pt-24 sm:px-6 lg:px-8">
 		<!-- Version badge -->
-		<div class="flex justify-center">
+		<!-- <div class="flex justify-center">
 			<a
 				href={siteConfig.github}
 				class="inline-flex items-center gap-x-2 rounded-full border border-gray-200 bg-white p-1 ps-3 text-sm text-gray-800 transition hover:border-gray-300 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-200"
@@ -39,7 +39,7 @@
 					<ChevronRight class="size-4" />
 				</Badge>
 			</a>
-		</div>
+		</div> -->
 
 		<!-- Title -->
 		<div class="mx-auto mt-5 max-w-2xl text-center">
