@@ -97,4 +97,4 @@ Note that we have a bound variable named `mapComponent`. The purpose of this var
 | ----------- | ----------------------------- | -------- | ------------------------------ |
 | `mapConfig` | Omit<MapOptions, 'container'> | No       | The initial config for mapbox. |
 
-For more information about available features, visit the Features section.
+For more information about available component, visit the Component section.
