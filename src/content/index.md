@@ -93,8 +93,8 @@ Note that we have a bound variable named `mapComponent`. The purpose of this var
 
 ## Container Props
 
-| Prop        | Type                          | Required | Description                    |
-| ----------- | ----------------------------- | -------- | ------------------------------ |
-| `mapConfig` | Omit<MapOptions, 'container'> | No       | The initial config for mapbox. |
+| Prop        | Type                                | Required | Description                    |
+| ----------- | ----------------------------------- | -------- | ------------------------------ |
+| `mapConfig` | Omit&lt;MapOptions, 'container'&gt; | No       | The initial config for mapbox. |
 
 For more information about available component, visit the Component section.
