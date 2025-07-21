@@ -38,9 +38,9 @@ Add the Mapbox container to initialize the map.
 
 ```svelte
 <script>
-	import * as MapBox from '@napxdd/mapbox-svelte';
+	import * as Mapbox from '@napxdd/mapbox-svelte';
 
-	let mapComponent: mapboxgl.Map;
+	let mapComponent: Mapbox.Container;
 </script>
 
 <div class="map-container">
@@ -69,7 +69,7 @@ Note that we have a bound variable named `mapComponent`. The purpose of this var
 
 ```svelte
 <script>
-	import * as MapBox from '@napxdd/mapbox-svelte';
+	import * as Mapbox from '@napxdd/mapbox-svelte';
 
 	let mapComponent: Mapbox.Container;
 
